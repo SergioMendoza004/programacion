@@ -1,0 +1,52 @@
+// menunotas.cpp : Defines the entry point for the console application.
+//
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <ctype.h>
+#include "stdlib.h"
+
+using namespace std;
+
+void main()
+{
+   char C, D, E, F, G, A, B, nota;
+     do {
+		cout<<"C.- Do" << endl;
+		cout<<"D.- Re" << endl;
+		cout<<"E.- Mi" << endl;
+		cout<<"F.- Fa" << endl;
+		cout<<"G.- Sol" << endl;
+		cout<<"A.- La" << endl;
+		cout<<"B.- Si" << endl;
+		cout<<"0.- Salir" <<endl;
+		cout<<"Seleccione una nota: ";
+		cin>>nota;
+		nota=toupper(nota);
+   switch (nota) {
+		
+		case 'C': 
+			cout << "Imprimiendo Do... "<<endl; break;
+	    case 'D': 
+			cout << "Imprimiendo Re... "<<endl; break;
+	    case 'E':  
+			cout << "Imprimiendo Mi... "<<endl; break;
+		case 'F':
+			cout << "Imprimiendo Fa... "<<endl; break;
+		case 'G': 
+			cout << "Imprimiendo Sol... "<<endl; break;
+		case 'A': 
+			cout << "Imprimiendo La... "<<endl; break;
+		case 'B': 
+			cout << "Imprimiendo Si... "<<endl; break;
+		case '0': cout << "Salir"<<endl ;break;
+	    default: cout << "Nota no existente" << endl;
+     }
+     system("cls");
+   } while (nota != '0');
+   getch();
+   }
+
+}
